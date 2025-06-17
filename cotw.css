@@ -5,10 +5,27 @@ body {
   margin: 20px auto;
   max-width: 900px;
   padding: 0 15px;
-  background: #f9f9f9;
   color: #222;
   font-size: 18px;  /* font più grande per desktop */
   line-height: 1.5;
+}
+
+.sfondo-fisso {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 900px;
+  background-image: url("./img/sfondo01.jpg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: cover;
+  z-index: -1;  /* in questo modo rimane dietro al contenuto */
+}
+
+.container {
+  margin: 20px;
+  padding-top: 920px;  /* per partire dopo l’immagine fissa */
 }
 
 h1, h2, h3, h4 {
