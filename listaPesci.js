@@ -1152,7 +1152,7 @@ const listaPesci = [
   },
   {
     "FISH": "Alpine Bullhead",
-    "RISERVA": "Golden Ridge",
+    "RISERVA": "Trollsporet",
     "esche": {
       "Eggs": "100",
       "Bloodworm": "38",
