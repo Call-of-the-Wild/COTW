@@ -1,5 +1,11 @@
 // Estrai le riserve uniche dalla tua "listaPesci"
 const reserves = [...new Set(listaPesci.map(p => p.RISERVA))];
+
+// Ordina le riserve in base a questo ordine personalizzato
+const ordineRiserve = ['Golden Ridge', 'Trollsporet', 'Aguas Claras', 'Izilo Zasendulo', 'Kamuibetsu'];
+
+reserves.sort((a, b) => ordineRiserve.indexOf(a) - ordineRiserve.indexOf(b));
+reserves.reverse();
 const reservesContainer = document.getElementById('reserves');
 const fishesList = document.getElementById('fishes');
 const details = document.getElementById('details');
@@ -10,7 +16,10 @@ reserves.forEach(riserva => {
   button.textContent = riserva;
   button.addEventListener('click', () => {
     // Filtra i pesci di quella riserva
-    const pesci = listaPesci.filter(p => p.RISERVA === riserva);
+    let pesci = listaPesci.filter(p => p.RISERVA === riserva);
+    // Ordina i pesci in ordine alfabetico
+    pesci.sort((a, b) => a.FISH.localeCompare(b.FISH));
+    pesci.reverse();
     // Svuota la lista
     fishesList.innerHTML = '';
     details.innerHTML = '';
@@ -32,7 +41,10 @@ reserves.forEach(riserva => {
           <ul>
             ${Object.entries(pesce.ranks).map(([rank, info]) =>
               `<li>${rank} - amo: ${info.numero_amo}, peso: ${info.peso}</li>`).join('')}
-          </ul>`;
+          </ul>
+<h4>Immagine</h4>
+<img src="img/${pesce.RISERVA[0].toLowerCase()}_${pesce.FISH.toLowerCase().replace(/\s+/g, '_')}.webp" alt="${pesce.FISH}" style="width:100%;max-width:400px;height:auto;margin-bottom:20px;" />
+`;
       });
       fishesList.prepend(li);
     });
