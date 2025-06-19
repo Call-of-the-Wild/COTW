@@ -1438,7 +1438,50 @@ const listaPesci = [
         "peso": "2.3-3.6kg"
       }
     }
-  },
+    },
+    {
+        "FISH": "Burbot",
+        "RISERVA": "Trollsporet",
+        "esche": {
+            "Liver": "100",
+            "Match Blend": "100",
+            "Shad": "100",
+            "Grub": "38",
+            "Hotdog": "38",
+            "Leeches": "38",
+            "Minnow": "38",
+            "Redworm": "38",
+            "Tube": "38",
+            "Worm": "38",
+            "Bloodworm": "13",
+            "Cheese": "13",
+            "Dough": "13",
+            "Eggs": "13",
+            "Marshmallow": "13"
+        },
+        "ranks": {
+            "Juvenile": {
+                "numero_amo": "da 10 a 8",
+                "peso": "0.06-0.7kg"
+            },
+            "Bronze": {
+                "numero_amo": "da 7 a 6",
+                "peso": "0.7-1.7kg"
+            },
+            "Silver": {
+                "numero_amo": "5",
+                "peso": "1.7-4kg"
+            },
+            "Gold": {
+                "numero_amo": "4",
+                "peso": "4-5.5kg"
+            },
+            "Diamond": {
+                "numero_amo": "da 3 a 2",
+                "peso": "5.5-8.5kg"
+            }
+        }
+    },
   {
     "FISH": "Common Dace",
     "RISERVA": "Trollsporet",
