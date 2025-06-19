@@ -4300,3 +4300,683 @@ const listaPesci = [
     }
   }
 ]
+
+const stileDiPesca = [
+        {
+            "pesce": "Big Larry",
+            "stili": [
+                "Baitcasting"
+            ]
+        },
+        {
+            "pesce": "Black Crappie",
+            "stili": [
+                "Baitcasting",
+                "Jighead"
+            ]
+        },
+        {
+            "pesce": "Bluegill",
+            "stili": [
+                "Baitcasting"
+            ]
+        },
+        {
+            "pesce": "Brook Trout",
+            "stili": [
+                "Feeder",
+                "Spinner",
+                "Baitcasting"
+            ]
+        },
+        {
+            "pesce": "Burbot",
+            "stili": [
+                "Baitcasting",
+                "Feeder"
+            ]
+        },
+        {
+            "pesce": "Channel catfish",
+            "stili": [
+                "Baitcasting",
+                "Feeder"
+            ]
+        },
+        {
+            "pesce": "Cutthroat Trout",
+            "stili": [
+                "Baitcasting",
+                "Spinner"
+            ]
+        },
+        {
+            "pesce": "Freshwater drum",
+            "stili": [
+                "Baitcasting",
+                "Feeder",
+                "Spinner"
+            ]
+        },
+        {
+            "pesce": "Golden Trout",
+            "stili": [
+                "Baitcasting",
+                "Spinner"
+            ]
+        },
+        {
+            "pesce": "Goldstein",
+            "stili": [
+                "Spinner"
+            ]
+        },
+        {
+            "pesce": "Green Sunfish",
+            "stili": [
+                "Baitcasting"
+            ]
+        },
+        {
+            "pesce": "Kokanee Salmon",
+            "stili": [
+                "Spinner"
+            ]
+        },
+        {
+            "pesce": "Lake Trout",
+            "stili": [
+                "Jighead",
+                "Spinner"
+            ]
+        },
+        {
+            "pesce": "Largemouth Bass",
+            "stili": [
+                "Spinner",
+                "Baitcasting"
+            ]
+        },
+        {
+            "pesce": "Mountain Whitefish",
+            "stili": [
+                "Baitcasting",
+                "Feeder"
+            ]
+        },
+        {
+            "pesce": "Northern Pike",
+            "stili": [
+                "Baitcasting",
+                "Spinner"
+            ]
+        },
+        {
+            "pesce": "Ohrid Trout",
+            "stili": [
+                "Baitcasting",
+                "Spinner"
+            ]
+        },
+        {
+            "pesce": "Rainbow Trout",
+            "stili": [
+                "Baitcasting",
+                "Spinner"
+            ]
+        },
+        {
+            "pesce": "River Carpsucker",
+            "stili": [
+                "Feeder"
+            ]
+        },
+        {
+            "pesce": "Rock Bass",
+            "stili": [
+                "Baitcasting"
+            ]
+        },
+        {
+            "pesce": "Sauger",
+            "stili": [
+                "Baitcasting",
+                "Feeder",
+                "Spinner"
+            ]
+        },
+        {
+            "pesce": "Shovelnose Sturgeon",
+            "stili": [
+                "Baitcasting",
+                "Feeder"
+            ]
+        },
+        {
+            "pesce": "Sidewinder",
+            "stili": [
+                "Jighead"
+            ]
+        },
+        {
+            "pesce": "Signal Crayfish",
+            "stili": [
+                "Feeder"
+            ]
+        },
+        {
+            "pesce": "Smallmouth Bass",
+            "stili": [
+                "Baitcasting",
+                "Spinner"
+            ]
+        },
+        {
+            "pesce": "Tiger Muskie",
+            "stili": [
+                "Baitcasting",
+                "Spinner"
+            ]
+        },
+        {
+            "pesce": "Walleye",
+            "stili": [
+                "Baitcasting",
+                "Jighead"
+            ]
+        },
+        {
+            "pesce": "White Crappie",
+            "stili": [
+                "Baitcasting"
+            ]
+        },
+        {
+            "pesce": "Yellow Perch",
+            "stili": [
+                "Baitcasting"
+            ]
+        },
+        {
+            "pesce": "Alpine Bullhead",
+            "stili": [
+                "Baitcasting"
+            ]
+        },
+        {
+            "pesce": "Arctic Char",
+            "stili": [
+                "Baitcasting",
+                "Spinner"
+            ]
+        },
+        {
+            "pesce": "Asp",
+            "stili": [
+                "Baitcasting",
+                "Jighead",
+                "Spinner"
+            ]
+        },
+        {
+            "pesce": "Atlantic Salmon",
+            "stili": [
+                "Baitcasting",
+                "Spinner"
+            ]
+        },
+        {
+            "pesce": "Bream",
+            "stili": [
+                "Feeder"
+            ]
+        },
+        {
+            "pesce": "Brown Trout",
+            "stili": [
+                "Baitcasting",
+                "Spinner"
+            ]
+        },
+        {
+            "pesce": "Bullhead Catfish",
+            "stili": [
+                "Baitcasting",
+                "Feeder"
+            ]
+        },
+        {
+            "pesce": "Chub",
+            "stili": [
+                "Baitcasting",
+                "Feeder"
+            ]
+        },
+        {
+            "pesce": "Common Dace",
+            "stili": [
+                "Baitcasting"
+            ]
+        },
+        {
+            "pesce": "European Bullhead",
+            "stili": [
+                "Baitcasting"
+            ]
+        },
+        {
+            "pesce": "European Perch",
+            "stili": [
+                "Baitcasting",
+                "Feeder",
+                "Spinner"
+            ]
+        },
+        {
+            "pesce": "Grayling",
+            "stili": [
+                "Baitcasting"
+            ]
+        },
+        {
+            "pesce": "Ide",
+            "stili": [
+                "Baitcasting",
+                "Feeder"
+            ]
+        },
+        {
+            "pesce": "Kalle Paul the Dominator",
+            "stili": [
+                "Spinner"
+            ]
+        },
+        {
+            "pesce": "Nortnerh Pike",
+            "stili": [
+                "Baitcasting",
+                "Spinner"
+            ]
+        },
+        {
+            "pesce": "Roach",
+            "stili": [
+                "Baitcasting",
+                "Feeder",
+                "Spinner"
+            ]
+        },
+        {
+            "pesce": "Ruffe",
+            "stili": [
+                "Baitcasting",
+                "Feeder"
+            ]
+        },
+        {
+            "pesce": "Speilfinne",
+            "stili": [
+                "Spinner"
+            ]
+        },
+        {
+            "pesce": "Store Henrik",
+            "stili": [
+                "Feeder"
+            ]
+        },
+        {
+            "pesce": "Zander",
+            "stili": [
+                "Baitcasting",
+                "Spinner"
+            ]
+        },
+        {
+            "pesce": "Alejandro Magno",
+            "stili": [
+                "Spinner"
+            ]
+        },
+        {
+            "pesce": "Andalusian Barbel",
+            "stili": [
+                "Baitcasting"
+            ]
+        },
+        {
+            "pesce": "Comizo Barbel",
+            "stili": [
+                "Baitcasting"
+            ]
+        },
+        {
+            "pesce": "Common Carp",
+            "stili": [
+                "Feeder"
+            ]
+        },
+        {
+            "pesce": "Crucian Carp",
+            "stili": [
+                "Baitcasting",
+                "Feeder"
+            ]
+        },
+        {
+            "pesce": "El Matador",
+            "stili": [
+                "Feeder"
+            ]
+        },
+        {
+            "pesce": "European Eel",
+            "stili": [
+                "Baitcasting"
+            ]
+        },
+        {
+            "pesce": "La Mostrenca",
+            "stili": [
+                "Baitcasting"
+            ]
+        },
+        {
+            "pesce": "Mirror Carp",
+            "stili": [
+                "Feeder",
+                "Spinner"
+            ]
+        },
+        {
+            "pesce": "Pumpkinseed",
+            "stili": [
+                "Baitcasting",
+                "Spinner"
+            ]
+        },
+        {
+            "pesce": "Rudd",
+            "stili": [
+                "Baitcasting",
+                "Feeder"
+            ]
+        },
+        {
+            "pesce": "Tench",
+            "stili": [
+                "Baitcasting",
+                "Feeder"
+            ]
+        },
+        {
+            "pesce": "Thicklip Mullet",
+            "stili": [
+                "Baitcasting"
+            ]
+        },
+        {
+            "pesce": "Thinlip Mullet",
+            "stili": [
+                "Baitcasting"
+            ]
+        },
+        {
+            "pesce": "Wels Catfish",
+            "stili": [
+                "Feeder",
+                "Jighead"
+            ]
+        },
+        {
+            "pesce": "African Mottled Eel",
+            "stili": [
+                "Baitcasting",
+                "Feeder",
+                "Jighead"
+            ]
+        },
+        {
+            "pesce": "African Sharptooth Catfish",
+            "stili": [
+                "Feeder",
+                "Jighead"
+            ]
+        },
+        {
+            "pesce": "African Tigerfish",
+            "stili": [
+                "Baitcasting",
+                "Spinner"
+            ]
+        },
+        {
+            "pesce": "Blue Kurper",
+            "stili": [
+                "Baitcasting",
+                "Spinner"
+            ]
+        },
+        {
+            "pesce": "Canary Kurper",
+            "stili": [
+                "Baitcasting",
+                "Spinner"
+            ]
+        },
+        {
+            "pesce": "Grass Carp",
+            "stili": [
+                "Baitcasting",
+                "Feeder"
+            ]
+        },
+        {
+            "pesce": "Grootslang",
+            "stili": [
+                "Feeder",
+                "Jighead"
+            ]
+        },
+        {
+            "pesce": "Karoo Mermaid",
+            "stili": [
+                "Feeder",
+                "Jighead"
+            ]
+        },
+        {
+            "pesce": "Largemouth Yellowfish",
+            "stili": [
+                "Baitcasting",
+                "Jighead",
+                "Spinner"
+            ]
+        },
+        {
+            "pesce": "Mamlambo",
+            "stili": [
+                "Spinner"
+            ]
+        },
+        {
+            "pesce": "Moggel",
+            "stili": [
+                "Baitcasting",
+                "Spinner"
+            ]
+        },
+        {
+            "pesce": "Purple Labeo",
+            "stili": [
+                "Baitcasting",
+                "Feeder"
+            ]
+        },
+        {
+            "pesce": "Redbreast Kurper",
+            "stili": [
+                "Baitcasting",
+                "Spinner"
+            ]
+        },
+        {
+            "pesce": "Rednose Labeo",
+            "stili": [
+                "Baitcasting",
+                "Feeder"
+            ]
+        },
+        {
+            "pesce": "Smallmouth Yellowfish",
+            "stili": [
+                "Baitcasting",
+                "Spinner"
+            ]
+        },
+        {
+            "pesce": "Spotted Bass",
+            "stili": [
+                "Baitcasting",
+                "Spinner"
+            ]
+        },
+        {
+            "pesce": "Amemasu",
+            "stili": [
+                "Spinner"
+            ]
+        },
+        {
+            "pesce": "Amur Catfish",
+            "stili": [
+                "Baitcasting",
+                "Feeder",
+                "Jighead",
+                "Spinner"
+            ]
+        },
+        {
+            "pesce": "Ayu Sweetfish",
+            "stili": [
+                "Baitcasting",
+                "Feeder",
+                "Jighead"
+            ]
+        },
+        {
+            "pesce": "Cherry Salmon",
+            "stili": [
+                "Baitcasting",
+                "Spinner"
+            ]
+        },
+        {
+            "pesce": "Chum Salmon",
+            "stili": [
+                "Spinner"
+            ]
+        },
+        {
+            "pesce": "Dolly Varden Trout",
+            "stili": [
+                "Baitcasting",
+                "Spinner"
+            ]
+        },
+        {
+            "pesce": "Feral Koi",
+            "stili": [
+                "Feeder",
+                "Jighead",
+                "Spinner"
+            ]
+        },
+        {
+            "pesce": "Goto the Immortal",
+            "stili": [
+                "Feeder"
+            ]
+        },
+        {
+            "pesce": "Japanese Dace",
+            "stili": [
+                "Baitcasting",
+                "Jighead"
+            ]
+        },
+        {
+            "pesce": "Japanese Eel",
+            "stili": [
+                "Feeder"
+            ]
+        },
+        {
+            "pesce": "Japanese Freshwater Crab",
+            "stili": [
+                "Baitcasting",
+                "Feeder"
+            ]
+        },
+        {
+            "pesce": "Japanese Smelt",
+            "stili": [
+                "Baitcasting"
+            ]
+        },
+        {
+            "pesce": "Koi no Takinobori",
+            "stili": [
+                "Feeder"
+            ]
+        },
+        {
+            "pesce": "Magoi",
+            "stili": [
+                "Feeder"
+            ]
+        },
+        {
+            "pesce": "Mozambique Tilapia",
+            "stili": [
+                "Baitcasting",
+                "Spinner"
+            ]
+        },
+        {
+            "pesce": "Northern Snakehead",
+            "stili": [
+                "Baitcasting",
+                "Feeder",
+                "Spinner"
+            ]
+        },
+        {
+            "pesce": "Pond Loach",
+            "stili": [
+                "Baitcasting"
+            ]
+        },
+        {
+            "pesce": "Sakhalin Taimen",
+            "stili": [
+                "Baitcasting",
+                "Jighead",
+                "Spinner"
+            ]
+        },
+        {
+            "pesce": "Sockeye Salmon",
+            "stili": [
+                "Baitcasting",
+                "Spinner"
+            ]
+        },
+        {
+            "pesce": "White Spotted Char",
+            "stili": [
+                "Baitcasting",
+                "Spinner"
+            ]
+        }
+    ]

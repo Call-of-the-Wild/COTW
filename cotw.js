@@ -42,28 +42,29 @@ reserves.forEach(riserva => {
         <span>${pesce.FISH}</span>`;
 
             li.addEventListener('click', () => {
-                // Mostra i dettagli
+                const stili = stileDiPesca.find(entry => entry.pesce === pesce.FISH)?.stili || [];
+
                 details.innerHTML = `
-          <h3>${pesce.FISH}</h3>
-          <p>Riserva: ${pesce.RISERVA}</p>
-          <h4>Esche</h4>
-          <ul>
-            ${Object.entries(pesce.esche).map(([esca, percentuale]) =>
+      <h3><strong>${pesce.FISH}</strong></h3>
+      <p><strong>Stili di pesca:</strong> ${stili.length ? stili.join(', ') : 'N/A'}</p>
+      <h4><strong>Esche</strong></h4>
+      <ul>
+        ${Object.entries(pesce.esche).map(([esca, percentuale]) =>
                     `<li>${esca} - ${percentuale}%</li>`).join('')}
-          </ul>
-          <h4>Ranks</h4>
-          <ul>
-            ${Object.entries(pesce.ranks).map(([rank, info]) =>
+      </ul>
+      <h4><strong>Ranks</strong></h4>
+      <ul>
+        ${Object.entries(pesce.ranks).map(([rank, info]) =>
                         `<li>${rank}: ${info.numero_amo}, peso: ${info.peso}</li>`).join('')}
-          </ul>
-          <h4>Zona di Pesca</h4>
-          <img src="img/${pesce.RISERVA[0].toLowerCase()}_${pesce.FISH.toLowerCase().replace(/\s+/g, '_')}.webp" alt="${pesce.FISH}" style="width:100%;max-width:400px;height:auto;margin-bottom:20px;" />
-        `;
+      </ul>
+      <h4><strong>Zona di Pesca</strong></h4>
+      <img src="img/${pesce.RISERVA[0].toLowerCase()}_${pesce.FISH.toLowerCase().replace(/\s+/g, '_')}.webp" alt="${pesce.FISH}" style="width:100%;max-width:400px;height:auto;margin-bottom:20px;" />
+    `;
                 details.style.display = 'block';
-                details.scrollIntoView({ behavior: 'smooth' })
+                details.scrollIntoView({ behavior: 'smooth' });
                 titoloDettagli.style.display = 'block';
-                details.style.display = 'block';
             });
+
 
             fishesList.prepend(li);
         });
