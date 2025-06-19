@@ -4349,20 +4349,26 @@ const stileDiPesca = [
             "pesce": "Big Larry",
             "stili": [
                 "Baitcasting"
-            ]
+        ],
+        "giorno": false,
+        "fondo": true,
         },
         {
             "pesce": "Black Crappie",
             "stili": [
                 "Baitcasting",
                 "Jighead"
-            ]
+            ],
+            "giorno": null,
+            "fondo": null,
         },
         {
             "pesce": "Bluegill",
             "stili": [
                 "Baitcasting"
-            ]
+            ],
+            "giorno": true,
+            "fondo": null,
         },
         {
             "pesce": "Brook Trout",
@@ -4370,28 +4376,36 @@ const stileDiPesca = [
                 "Feeder",
                 "Spinner",
                 "Baitcasting"
-            ]
+            ],
+            "giorno": true,
+            "fondo": null,
         },
         {
             "pesce": "Burbot",
             "stili": [
                 "Baitcasting",
                 "Feeder"
-            ]
+            ],
+            "giorno": false,
+            "fondo": null,
         },
         {
             "pesce": "Channel Catfish",
             "stili": [
                 "Baitcasting",
                 "Feeder"
-            ]
+            ],
+            "giorno": false,
+            "fondo": true,
         },
         {
             "pesce": "Cutthroat Trout",
             "stili": [
                 "Baitcasting",
                 "Spinner"
-            ]
+            ],
+            "giorno": true,
+            "fondo": null,
         },
         {
             "pesce": "Freshwater Drum",
@@ -4399,86 +4413,112 @@ const stileDiPesca = [
                 "Baitcasting",
                 "Feeder",
                 "Spinner"
-            ]
+            ],
+            "giorno": null,
+            "fondo": true,
         },
         {
             "pesce": "Golden Trout",
             "stili": [
                 "Baitcasting",
                 "Spinner"
-            ]
+            ],
+            "giorno": null,
+            "fondo": null,
         },
         {
             "pesce": "Goldstein",
             "stili": [
                 "Spinner"
-            ]
+            ],
+            "giorno": null,
+            "fondo": null,
         },
         {
             "pesce": "Green Sunfish",
             "stili": [
                 "Baitcasting"
-            ]
+            ],
+            "giorno": true,
+            "fondo": null,
         },
         {
             "pesce": "Kokanee Salmon",
             "stili": [
                 "Spinner"
-            ]
+            ],
+            "giorno": true,
+            "fondo": null,
         },
         {
             "pesce": "Lake Trout",
             "stili": [
                 "Jighead",
                 "Spinner"
-            ]
+            ],
+            "giorno": null,
+            "fondo": null,
         },
         {
             "pesce": "Largemouth Bass",
             "stili": [
                 "Spinner",
                 "Baitcasting"
-            ]
+            ],
+            "giorno": true,
+            "fondo": null,
         },
         {
             "pesce": "Mountain Whitefish",
             "stili": [
                 "Baitcasting",
                 "Feeder"
-            ]
+            ],
+            "giorno": true,
+            "fondo": true,
         },
         {
             "pesce": "Northern Pike",
             "stili": [
                 "Baitcasting",
                 "Spinner"
-            ]
+            ],
+            "giorno": true,
+            "fondo": null,
         },
         {
             "pesce": "Ohrid Trout",
             "stili": [
                 "Baitcasting",
                 "Spinner"
-            ]
+            ],
+            "giorno": true,
+            "fondo": null,
         },
         {
             "pesce": "Rainbow Trout",
             "stili": [
                 "Baitcasting",
                 "Spinner"
-            ]
+            ],
+            "giorno": true,
+            "fondo": null,
         },
         {
             "pesce": "River Carpsucker",
             "stili": [
                 "Feeder"
-            ]
+            ],
+            "giorno": null,
+            "fondo": true,
         },
         {
             "pesce": "Rock Bass",
             "stili": [
                 "Baitcasting"
-            ]
+            ],
+            "giorno": null,
+            "fondo": null,
         },
         {
             "pesce": "Sauger",
@@ -4486,72 +4526,94 @@ const stileDiPesca = [
                 "Baitcasting",
                 "Feeder",
                 "Spinner"
-            ]
+            ],
+            "giorno": false,
+            "fondo": true,
         },
         {
             "pesce": "Shovelnose Sturgeon",
             "stili": [
                 "Baitcasting",
                 "Feeder"
-            ]
+            ],
+            "giorno": false,
+            "fondo": true,
         },
         {
             "pesce": "Sidewinder",
             "stili": [
                 "Jighead"
-            ]
+            ],
+            "giorno": null,
+            "fondo": true,
         },
         {
             "pesce": "Signal Crayfish",
             "stili": [
                 "Feeder"
-            ]
+            ],
+            "giorno": false,
+            "fondo": true,
         },
         {
             "pesce": "Smallmouth Bass",
             "stili": [
                 "Baitcasting",
                 "Spinner"
-            ]
+            ],
+            "giorno": true,
+            "fondo": null,
         },
         {
             "pesce": "Tiger Muskie",
             "stili": [
                 "Baitcasting",
                 "Spinner"
-            ]
+            ],
+            "giorno": null,
+            "fondo": null,
         },
         {
             "pesce": "Walleye",
             "stili": [
                 "Baitcasting",
                 "Jighead"
-            ]
+            ],
+            "giorno": false,
+            "fondo": null,
         },
         {
             "pesce": "White Crappie",
             "stili": [
                 "Baitcasting"
-            ]
+            ],
+            "giorno": false,
+            "fondo": null,
         },
         {
             "pesce": "Yellow Perch",
             "stili": [
                 "Baitcasting"
-            ]
+            ],
+            "giorno": true,
+            "fondo": true,
         },
         {
             "pesce": "Alpine Bullhead",
             "stili": [
                 "Baitcasting"
-            ]
+            ],
+            "giorno": false,
+            "fondo": null,
         },
         {
             "pesce": "Arctic Char",
             "stili": [
                 "Baitcasting",
                 "Spinner"
-            ]
+            ],
+            "giorno": true,
+            "fondo": null,
         },
         {
             "pesce": "Asp",
@@ -4559,53 +4621,69 @@ const stileDiPesca = [
                 "Baitcasting",
                 "Jighead",
                 "Spinner"
-            ]
+            ],
+            "giorno": true,
+            "fondo": null,
         },
         {
             "pesce": "Atlantic Salmon",
             "stili": [
                 "Baitcasting",
                 "Spinner"
-            ]
+            ],
+            "giorno": true,
+            "fondo": null,
         },
         {
             "pesce": "Bream",
             "stili": [
                 "Feeder"
-            ]
+            ],
+            "giorno": false,
+            "fondo": true,
         },
         {
             "pesce": "Brown Trout",
             "stili": [
                 "Baitcasting",
                 "Spinner"
-            ]
+            ],
+            "giorno": true,
+            "fondo": null,
         },
         {
             "pesce": "Bullhead Catfish",
             "stili": [
                 "Baitcasting",
                 "Feeder"
-            ]
+            ],
+            "giorno": false,
+            "fondo": true,
         },
         {
             "pesce": "Chub",
             "stili": [
                 "Baitcasting",
                 "Feeder"
-            ]
+            ],
+            "giorno": null,
+            "fondo": true,
         },
         {
             "pesce": "Common Dace",
             "stili": [
                 "Baitcasting"
-            ]
+            ],
+            "giorno": null,
+            "fondo": null,
         },
         {
             "pesce": "European Bullhead",
             "stili": [
                 "Baitcasting"
-            ]
+            ],
+            "giorno": true,
+            "fondo": null,
         },
         {
             "pesce": "European Perch",
@@ -4613,26 +4691,34 @@ const stileDiPesca = [
                 "Baitcasting",
                 "Feeder",
                 "Spinner"
-            ]
+            ],
+            "giorno": true,
+            "fondo": true,
         },
         {
             "pesce": "Grayling",
             "stili": [
                 "Baitcasting"
-            ]
+            ],
+            "giorno": true,
+            "fondo": null,
         },
         {
             "pesce": "Ide",
             "stili": [
                 "Baitcasting",
                 "Feeder"
-            ]
+            ],
+            "giorno": null,
+            "fondo": null,
         },
         {
             "pesce": "Kalle Paul the Dominator",
             "stili": [
                 "Spinner"
-            ]
+            ],
+            "giorno": null,
+            "fondo": null,
         },
         {
             "pesce": "Nortnerh Pike",
@@ -4647,129 +4733,169 @@ const stileDiPesca = [
                 "Baitcasting",
                 "Feeder",
                 "Spinner"
-            ]
+            ],
+            "giorno": null,
+            "fondo": true,
         },
         {
             "pesce": "Ruffe",
             "stili": [
                 "Baitcasting",
                 "Feeder"
-            ]
+            ],
+            "giorno": null,
+            "fondo": true,
         },
         {
             "pesce": "Speilfinne",
             "stili": [
                 "Spinner"
-            ]
+            ],
+            "giorno": true,
+            "fondo": null,
         },
         {
             "pesce": "Store Henrik",
             "stili": [
                 "Feeder"
-            ]
+            ],
+            "giorno": false,
+            "fondo": true,
         },
         {
             "pesce": "Zander",
             "stili": [
                 "Baitcasting",
                 "Spinner"
-            ]
+            ],
+            "giorno": false,
+            "fondo": null,
         },
         {
             "pesce": "Alejandro Magno",
             "stili": [
                 "Spinner"
-            ]
+            ],
+            "giorno": null,
+            "fondo": null,
         },
         {
             "pesce": "Andalusian Barbel",
             "stili": [
                 "Baitcasting"
-            ]
+            ],
+            "giorno": null,
+            "fondo": null,
         },
         {
             "pesce": "Comizo Barbel",
             "stili": [
                 "Baitcasting"
-            ]
+            ],
+            "giorno": null,
+            "fondo": null,
         },
         {
             "pesce": "Common Carp",
             "stili": [
                 "Feeder"
-            ]
+            ],
+            "giorno": null,
+            "fondo": true,
         },
         {
             "pesce": "Crucian Carp",
             "stili": [
                 "Baitcasting",
                 "Feeder"
-            ]
+            ],
+            "giorno": null,
+            "fondo": true,
         },
         {
             "pesce": "El Matador",
             "stili": [
                 "Feeder"
-            ]
+            ],
+            "giorno": null,
+            "fondo": true,
         },
         {
             "pesce": "European Eel",
             "stili": [
                 "Baitcasting"
-            ]
+            ],
+            "giorno": false,
+            "fondo": null,
         },
         {
             "pesce": "La Mostrenca",
             "stili": [
                 "Baitcasting"
-            ]
+            ],
+            "giorno": false,
+            "fondo": null,
         },
         {
             "pesce": "Mirror Carp",
             "stili": [
                 "Feeder",
                 "Spinner"
-            ]
+            ],
+            "giorno": null,
+            "fondo": true,
         },
         {
             "pesce": "Pumpkinseed",
             "stili": [
                 "Baitcasting",
                 "Spinner"
-            ]
+            ],
+            "giorno": true,
+            "fondo": null,
         },
         {
             "pesce": "Rudd",
             "stili": [
                 "Baitcasting",
                 "Feeder"
-            ]
+            ],
+            "giorno": null,
+            "fondo": true,
         },
         {
             "pesce": "Tench",
             "stili": [
                 "Baitcasting",
                 "Feeder"
-            ]
+            ],
+            "giorno": null,
+            "fondo": true,
         },
         {
             "pesce": "Thicklip Mullet",
             "stili": [
                 "Baitcasting"
-            ]
+            ],
+            "giorno": null,
+            "fondo": null,
         },
         {
             "pesce": "Thinlip Mullet",
             "stili": [
                 "Baitcasting"
-            ]
+            ],
+            "giorno": null,
+            "fondo": null,
         },
         {
             "pesce": "Wels Catfish",
             "stili": [
                 "Feeder",
                 "Jighead"
-            ]
+            ],
+            "giorno": false,
+            "fondo": true,
         },
         {
             "pesce": "African Mottled Eel",
@@ -4777,56 +4903,72 @@ const stileDiPesca = [
                 "Baitcasting",
                 "Feeder",
                 "Jighead"
-            ]
+            ],
+            "giorno": false,
+            "fondo": true,
         },
         {
             "pesce": "African Sharptooth Catfish",
             "stili": [
                 "Feeder",
                 "Jighead"
-            ]
+            ],
+            "giorno": false,
+            "fondo": true,
         },
         {
             "pesce": "African Tigerfish",
             "stili": [
                 "Baitcasting",
                 "Spinner"
-            ]
+            ],
+            "giorno": null,
+            "fondo": null,
         },
         {
             "pesce": "Blue Kurper",
             "stili": [
                 "Baitcasting",
                 "Spinner"
-            ]
+            ],
+            "giorno": null,
+            "fondo": null,
         },
         {
             "pesce": "Canary Kurper",
             "stili": [
                 "Baitcasting",
                 "Spinner"
-            ]
+            ],
+            "giorno": null,
+            "fondo": null,
         },
         {
             "pesce": "Grass Carp",
             "stili": [
                 "Baitcasting",
                 "Feeder"
-            ]
+            ],
+            "giorno": null,
+            "fondo": null,
         },
         {
             "pesce": "Grootslang",
             "stili": [
                 "Feeder",
                 "Jighead"
-            ]
+            ],
+            "giorno": false,
+            "fondo": true,
         },
         {
             "pesce": "Karoo Mermaid",
             "stili": [
                 "Feeder",
                 "Jighead"
-            ]
+            ],
+            "giorno": false,
+            "fondo": true,
         },
         {
             "pesce": "Largemouth Yellowfish",
@@ -4834,61 +4976,79 @@ const stileDiPesca = [
                 "Baitcasting",
                 "Jighead",
                 "Spinner"
-            ]
+            ],
+            "giorno": null,
+            "fondo": null,
         },
         {
             "pesce": "Mamlambo",
             "stili": [
                 "Spinner"
-            ]
+            ],
+            "giorno": null,
+            "fondo": null,
         },
         {
             "pesce": "Moggel",
             "stili": [
                 "Baitcasting",
                 "Spinner"
-            ]
+            ],
+            "giorno": null,
+            "fondo": null,
         },
         {
             "pesce": "Purple Labeo",
             "stili": [
                 "Baitcasting",
                 "Feeder"
-            ]
+            ],
+            "giorno": null,
+            "fondo": null,
         },
         {
             "pesce": "Redbreast Kurper",
             "stili": [
                 "Baitcasting",
                 "Spinner"
-            ]
+            ],
+            "giorno": null,
+            "fondo": null,
         },
         {
             "pesce": "Rednose Labeo",
             "stili": [
                 "Baitcasting",
                 "Feeder"
-            ]
+            ],
+            "giorno": null,
+            "fondo": true,
         },
         {
             "pesce": "Smallmouth Yellowfish",
             "stili": [
                 "Baitcasting",
                 "Spinner"
-            ]
+            ],
+            "giorno": null,
+            "fondo": null,
         },
         {
             "pesce": "Spotted Bass",
             "stili": [
                 "Baitcasting",
                 "Spinner"
-            ]
+            ],
+            "giorno": null,
+            "fondo": null,
         },
         {
             "pesce": "Amemasu",
             "stili": [
                 "Spinner"
-            ]
+            ],
+            "giorno": true,
+            "fondo": null,
         },
         {
             "pesce": "Amur Catfish",
@@ -4897,7 +5057,9 @@ const stileDiPesca = [
                 "Feeder",
                 "Jighead",
                 "Spinner"
-            ]
+            ],
+            "giorno": false,
+            "fondo": true,
         },
         {
             "pesce": "Ayu Sweetfish",
@@ -4905,27 +5067,35 @@ const stileDiPesca = [
                 "Baitcasting",
                 "Feeder",
                 "Jighead"
-            ]
+            ],
+            "giorno": false,
+            "fondo": null,
         },
         {
             "pesce": "Cherry Salmon",
             "stili": [
                 "Baitcasting",
                 "Spinner"
-            ]
+            ],
+            "giorno": null,
+            "fondo": null,
         },
         {
             "pesce": "Chum Salmon",
             "stili": [
                 "Spinner"
-            ]
+            ],
+            "giorno": null,
+            "fondo": null,
         },
         {
             "pesce": "Dolly Varden Trout",
             "stili": [
                 "Baitcasting",
                 "Spinner"
-            ]
+            ],
+            "giorno": null,
+            "fondo": null,
         },
         {
             "pesce": "Feral Koi",
@@ -4933,58 +5103,76 @@ const stileDiPesca = [
                 "Feeder",
                 "Jighead",
                 "Spinner"
-            ]
+            ],
+            "giorno": null,
+            "fondo": true,
         },
         {
             "pesce": "Goto the Immortal",
             "stili": [
                 "Feeder"
-            ]
+            ],
+            "giorno": null,
+            "fondo": true,
         },
         {
             "pesce": "Japanese Dace",
             "stili": [
                 "Baitcasting",
                 "Jighead"
-            ]
+            ],
+            "giorno": null,
+            "fondo": null,
         },
         {
             "pesce": "Japanese Eel",
             "stili": [
                 "Feeder"
-            ]
+            ],
+            "giorno": false,
+            "fondo": true,
         },
         {
             "pesce": "Japanese Freshwater Crab",
             "stili": [
                 "Baitcasting",
                 "Feeder"
-            ]
+            ],
+            "giorno": null,
+            "fondo": true,
         },
         {
             "pesce": "Japanese Smelt",
             "stili": [
                 "Baitcasting"
-            ]
+            ],
+            "giorno": null,
+            "fondo": null,
         },
         {
             "pesce": "Koi no Takinobori",
             "stili": [
                 "Feeder"
-            ]
+            ],
+            "giorno": null,
+            "fondo": true,
         },
         {
             "pesce": "Magoi",
             "stili": [
                 "Feeder"
-            ]
+            ],
+            "giorno": null,
+            "fondo": true,
         },
         {
             "pesce": "Mozambique Tilapia",
             "stili": [
                 "Baitcasting",
                 "Spinner"
-            ]
+            ],
+            "giorno": null,
+            "fondo": null,
         },
         {
             "pesce": "Northern Snakehead",
@@ -4992,13 +5180,17 @@ const stileDiPesca = [
                 "Baitcasting",
                 "Feeder",
                 "Spinner"
-            ]
+            ],
+            "giorno": null,
+            "fondo": null,
         },
         {
             "pesce": "Pond Loach",
             "stili": [
                 "Baitcasting"
-            ]
+            ],
+            "giorno": null,
+            "fondo": null,
         },
         {
             "pesce": "Sakhalin Taimen",
@@ -5006,20 +5198,26 @@ const stileDiPesca = [
                 "Baitcasting",
                 "Jighead",
                 "Spinner"
-            ]
+            ],
+            "giorno": null,
+            "fondo": null,
         },
         {
             "pesce": "Sockeye Salmon",
             "stili": [
                 "Baitcasting",
                 "Spinner"
-            ]
+            ],
+            "giorno": null,
+            "fondo": null,
         },
         {
             "pesce": "White Spotted Char",
             "stili": [
                 "Baitcasting",
                 "Spinner"
-            ]
+            ],
+            "giorno": true,
+            "fondo": null,
         }
     ]

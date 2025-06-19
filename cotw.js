@@ -42,37 +42,54 @@ reserves.forEach(riserva => {
         <span>${pesce.FISH}</span>`;
 
             li.addEventListener('click', () => {
-                const stili = stileDiPesca.find(entry => entry.pesce === pesce.FISH)?.stili || [];
+                // Trova stile di pesca corrispondente
+                const stile = stileDiPesca.find(entry => entry.pesce === pesce.FISH);
+                const stili = stile?.stili || [];
 
+                // Immagini condizionali
+                const giornoImg = stile?.giorno === true
+                    ? '<img src="imgpesci/giorno.gif" alt="giorno" title="Pesca di giorno" style="width:50px; vertical-align:middle; margin-left:8px;" />'
+                    : stile?.giorno === false
+                        ? '<img src="imgpesci/notte.gif" alt="notte" title="Pesca di notte" style="width:50px; vertical-align:middle; margin-left:8px;" />'
+                        : '';
+
+                const fondoImg = stile?.fondo === true
+                    ? '<img src="imgpesci/fondo.gif" alt="fondo" title="Pesca a fondo" style="width:50px; vertical-align:middle; margin-left:8px;" />'
+                    : '';
+
+                // HTML dei dettagli del pesce
                 details.innerHTML = `
-      <h3><strong>${pesce.FISH}</strong></h3>
-      <p><strong>Stili di pesca:</strong> ${stili.length ? stili.join(', ') : 'N/A'}</p>
-      <h4><strong>Esche</strong></h4>
-      <ul>
-        ${Object.entries(pesce.esche).map(([esca, percentuale]) =>
+            <h3><strong>${pesce.FISH}</strong> ${giornoImg} ${fondoImg}</h3>
+            <p><strong>Stili di pesca:</strong> ${stili.length ? stili.join(', ') : 'N/A'}</p>
+            <h4><strong>Esche</strong></h4>
+            <ul>
+                ${Object.entries(pesce.esche).map(([esca, percentuale]) =>
                     `<li>${esca} - ${percentuale}%</li>`).join('')}
-      </ul>
-      <h4><strong>Ranks</strong></h4>
-      <ul>
-        ${Object.entries(pesce.ranks).map(([rank, info]) =>
+            </ul>
+            <h4><strong>Ranks</strong></h4>
+            <ul>
+                ${Object.entries(pesce.ranks).map(([rank, info]) =>
                         `<li>${rank}: ${info.numero_amo}, peso: ${info.peso}</li>`).join('')}
-      </ul>
-      <h4><strong>Zona di Pesca</strong></h4>
-      <img src="img/${pesce.RISERVA[0].toLowerCase()}_${pesce.FISH.toLowerCase().replace(/\s+/g, '_')}.webp" alt="${pesce.FISH}" style="width:100%;max-width:400px;height:auto;margin-bottom:20px;" />
-    `;
+            </ul>
+            <h4><strong>Zona di Pesca</strong></h4>
+            <img src="img/${pesce.RISERVA[0].toLowerCase()}_${pesce.FISH.toLowerCase().replace(/\s+/g, '_')}.webp" alt="${pesce.FISH}" style="width:100%;max-width:400px;height:auto;margin-bottom:20px;" />
+        `;
+
+                // Mostra dettagli
                 details.style.display = 'block';
                 details.scrollIntoView({ behavior: 'smooth' });
                 titoloDettagli.style.display = 'block';
             });
 
-
             fishesList.prepend(li);
         });
+
         titoloPesci.style.display = 'block';
         fishesList.style.display = 'grid';
         // Nascondi dettagli finché non clicco il pesce
         titoloDettagli.style.display = 'none';
         details.style.display = 'none';
+
     });
     reservesContainer.prepend(button);
 });
