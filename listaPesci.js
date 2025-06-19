@@ -4337,7 +4337,7 @@ const stileDiPesca = [
             ]
         },
         {
-            "pesce": "Channel catfish",
+            "pesce": "Channel Catfish",
             "stili": [
                 "Baitcasting",
                 "Feeder"
@@ -4351,7 +4351,7 @@ const stileDiPesca = [
             ]
         },
         {
-            "pesce": "Freshwater drum",
+            "pesce": "Freshwater Drum",
             "stili": [
                 "Baitcasting",
                 "Feeder",
@@ -4586,7 +4586,7 @@ const stileDiPesca = [
             ]
         },
         {
-            "pesce": "Kalle Paul the Dominator",
+            "pesce": "Kalle Paul The Dominator",
             "stili": [
                 "Spinner"
             ]
@@ -4893,7 +4893,7 @@ const stileDiPesca = [
             ]
         },
         {
-            "pesce": "Goto the Immortal",
+            "pesce": "Goto The Immortal",
             "stili": [
                 "Feeder"
             ]
@@ -4925,7 +4925,7 @@ const stileDiPesca = [
             ]
         },
         {
-            "pesce": "Koi no Takinobori",
+            "pesce": "Koi No Takinobori",
             "stili": [
                 "Feeder"
             ]
