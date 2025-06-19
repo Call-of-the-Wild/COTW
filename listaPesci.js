@@ -4586,7 +4586,7 @@ const stileDiPesca = [
             ]
         },
         {
-            "pesce": "Kalle Paul The Dominator",
+            "pesce": "Kalle Paul the Dominator",
             "stili": [
                 "Spinner"
             ]
@@ -4893,7 +4893,7 @@ const stileDiPesca = [
             ]
         },
         {
-            "pesce": "Goto The Immortal",
+            "pesce": "Goto the Immortal",
             "stili": [
                 "Feeder"
             ]
@@ -4925,7 +4925,7 @@ const stileDiPesca = [
             ]
         },
         {
-            "pesce": "Koi No Takinobori",
+            "pesce": "Koi no Takinobori",
             "stili": [
                 "Feeder"
             ]
