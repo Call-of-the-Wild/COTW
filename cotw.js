@@ -74,7 +74,12 @@ reserves.forEach(riserva => {
                         `<li>${rank}: ${info.numero_amo}, peso: ${info.peso}</li>`).join('')}
             </ul>
             <h4><strong>Zona di Pesca</strong></h4>
-            <img src="img/${pesce.RISERVA[0].toLowerCase()}_${pesce.FISH.toLowerCase().replace(/\s+/g, '_')}.webp" alt="${pesce.FISH}" style="width:100%;max-width:400px;height:auto;margin-bottom:20px;" />
+<img
+    src="img/${pesce.RISERVA[0].toLowerCase()}_${pesce.FISH.toLowerCase().replace(/\s+/g, '_')}.webp" 
+    alt="${pesce.FISH}" 
+    style="width:100%;max-width:400px;height:auto;margin-bottom:20px;cursor:pointer;" 
+    class="zona-pesca-img"
+/>
         `;
 
                 details.style.display = 'block';
@@ -94,4 +99,28 @@ reserves.forEach(riserva => {
 
     });
     reservesContainer.prepend(button);
+});
+// Selezione elementi modale
+const modal = document.getElementById('imageModal');
+const modalImg = document.getElementById('modalImg');
+const closeModal = document.getElementById('closeModal');
+
+// Apri modale cliccando sull'immagine della zona di pesca
+document.addEventListener('click', function (e) {
+    if (e.target.classList.contains('zona-pesca-img')) {
+        modal.style.display = 'flex';
+        modalImg.src = e.target.src;
+    }
+});
+
+// Chiudi modale cliccando sulla X
+closeModal.addEventListener('click', function () {
+    modal.style.display = 'none';
+});
+
+// Chiudi modale cliccando fuori dall'immagine
+modal.addEventListener('click', function (e) {
+    if (e.target === modal) {
+        modal.style.display = 'none';
+    }
 });
