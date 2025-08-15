@@ -100,27 +100,102 @@ reserves.forEach(riserva => {
     });
     reservesContainer.prepend(button);
 });
-// Selezione elementi modale
+
 const modal = document.getElementById('imageModal');
 const modalImg = document.getElementById('modalImg');
 const closeModal = document.getElementById('closeModal');
+const imageWrapper = document.querySelector('.image-wrapper');
 
-// Apri modale cliccando sull'immagine della zona di pesca
+let isPanning = false;
+let startX, startY, scrollLeft, scrollTop;
+
+// Apri modale quando clicchi immagine zona di pesca
 document.addEventListener('click', function (e) {
     if (e.target.classList.contains('zona-pesca-img')) {
         modal.style.display = 'flex';
         modalImg.src = e.target.src;
+        imageWrapper.scrollLeft = (modalImg.width - imageWrapper.clientWidth) / 2;
+        imageWrapper.scrollTop = (modalImg.height - imageWrapper.clientHeight) / 2;
+
+        // Blocca scroll pagina
+        document.body.style.overflow = 'hidden';
     }
 });
 
-// Chiudi modale cliccando sulla X
+// Chiudi con la X
 closeModal.addEventListener('click', function () {
     modal.style.display = 'none';
+    // Riabilita scroll pagina
+    document.body.style.overflow = '';
 });
 
-// Chiudi modale cliccando fuori dall'immagine
+// Chiudi cliccando fuori dall'immagine
 modal.addEventListener('click', function (e) {
     if (e.target === modal) {
         modal.style.display = 'none';
+        // Riabilita scroll pagina
+        document.body.style.overflow = '';
     }
 });
+
+modal.addEventListener('touchmove', function (e) {
+    if (modal.style.display === 'flex' && !e.target.closest('.image-wrapper')) {
+        e.preventDefault(); // Impedisce scroll sotto
+    }
+}, { passive: false });
+
+
+// Panning con mouse
+imageWrapper.addEventListener('mousedown', (e) => {
+    isPanning = true;
+    imageWrapper.style.cursor = 'grabbing';
+    startX = e.pageX - imageWrapper.offsetLeft;
+    startY = e.pageY - imageWrapper.offsetTop;
+    scrollLeft = imageWrapper.scrollLeft;
+    scrollTop = imageWrapper.scrollTop;
+});
+
+imageWrapper.addEventListener('mouseleave', () => {
+    isPanning = false;
+    imageWrapper.style.cursor = 'grab';
+});
+
+imageWrapper.addEventListener('mouseup', () => {
+    isPanning = false;
+    imageWrapper.style.cursor = 'grab';
+});
+
+imageWrapper.addEventListener('mousemove', (e) => {
+    if (!isPanning) return;
+    e.preventDefault();
+    const x = e.pageX - imageWrapper.offsetLeft;
+    const y = e.pageY - imageWrapper.offsetTop;
+    const walkX = (x - startX);
+    const walkY = (y - startY);
+    imageWrapper.scrollLeft = scrollLeft - walkX;
+    imageWrapper.scrollTop = scrollTop - walkY;
+});
+
+// Panning touch (mobile)
+imageWrapper.addEventListener('touchstart', (e) => {
+    isPanning = true;
+    startX = e.touches[0].pageX - imageWrapper.offsetLeft;
+    startY = e.touches[0].pageY - imageWrapper.offsetTop;
+    scrollLeft = imageWrapper.scrollLeft;
+    scrollTop = imageWrapper.scrollTop;
+}, { passive: true });
+
+imageWrapper.addEventListener('touchend', () => {
+    isPanning = false;
+});
+
+imageWrapper.addEventListener('touchmove', (e) => {
+    if (!isPanning) return;
+    const x = e.touches[0].pageX - imageWrapper.offsetLeft;
+    const y = e.touches[0].pageY - imageWrapper.offsetTop;
+    const walkX = (x - startX);
+    const walkY = (y - startY);
+    imageWrapper.scrollLeft = scrollLeft - walkX;
+    imageWrapper.scrollTop = scrollTop - walkY;
+}, { passive: true });
+
