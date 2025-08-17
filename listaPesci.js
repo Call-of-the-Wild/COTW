@@ -1104,7 +1104,7 @@ const listaPesci = [
     "ranks": {
       "Legendary": {
         "numero_amo": "da 4 a 4/0",
-        "peso": ""
+        "peso": "50,21kg"
       }
     }
   },
@@ -1126,7 +1126,7 @@ const listaPesci = [
     "ranks": {
       "Legendary": {
         "numero_amo": "da 1 a 4/0",
-        "peso": ""
+        "peso": "29,23kg"
       }
     }
   },
@@ -1146,7 +1146,7 @@ const listaPesci = [
     "ranks": {
       "Legendary": {
         "numero_amo": "da 7 a 3/0",
-        "peso": ""
+        "peso": "12,39kg"
       }
     }
   },
@@ -1929,7 +1929,7 @@ const listaPesci = [
     "ranks": {
       "Legendary": {
         "numero_amo": "da 7 a 4/0",
-        "peso": ""
+        "peso": "29,57kg"
       }
     }
   },
@@ -1949,7 +1949,7 @@ const listaPesci = [
     "ranks": {
       "Legendary": {
         "numero_amo": "da 7 a 4/0",
-        "peso": ""
+        "peso": "36,55kg"
       }
     }
   },
@@ -1975,7 +1975,7 @@ const listaPesci = [
     "ranks": {
       "Legendary": {
         "numero_amo": "da 10 a 2",
-        "peso": ""
+        "peso": "9,85kg"
       }
     }
   },
@@ -2687,7 +2687,7 @@ const listaPesci = [
     "ranks": {
       "Legendary": {
         "numero_amo": "da 2 a 4/0",
-        "peso": ""
+        "peso": "23,72kg"
       }
     }
   },
@@ -2703,7 +2703,7 @@ const listaPesci = [
     "ranks": {
       "Legendary": {
         "numero_amo": "da 1/0 a 4/0",
-        "peso": ""
+        "peso": "40,96kg"
       }
     }
   },
@@ -2726,7 +2726,7 @@ const listaPesci = [
     "ranks": {
       "Legendary": {
         "numero_amo": "da 2 a 4/0",
-        "peso": ""
+        "peso": "20,13kg"
       }
     }
   },
@@ -3477,7 +3477,7 @@ const listaPesci = [
     "ranks": {
       "Legendary": {
         "numero_amo": "da 1 a 4/0",
-        "peso": ""
+        "peso": "30kg"
       }
     }
   },
@@ -4284,7 +4284,7 @@ const listaPesci = [
     "ranks": {
       "Legendary": {
         "numero_amo": "da 10 a 4/0",
-        "peso": ""
+        "peso": "12,70kg"
       }
     }
   },
@@ -4309,7 +4309,7 @@ const listaPesci = [
     "ranks": {
       "Legendary": {
         "numero_amo": "da 2 a 3/0",
-        "peso": ""
+        "peso": "9,34kg"
       }
     }
   },
@@ -4338,7 +4338,7 @@ const listaPesci = [
     "ranks": {
       "Legendary": {
         "numero_amo": "da 5 a 4/0",
-        "peso": ""
+        "peso": "26,60kg"
       }
     }
   }
