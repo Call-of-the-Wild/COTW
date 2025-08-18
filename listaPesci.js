@@ -4593,7 +4593,8 @@ const stileDiPesca = [
         {
             "pesce": "Yellow Perch",
             "stili": [
-                "Baitcasting"
+                "Baitcasting",
+                "Feeder"
             ],
             "giorno": true,
             "fondo": true,
