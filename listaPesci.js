@@ -4347,7 +4347,8 @@ const listaPesci = [
 const stileDiPesca = [
         {
             "pesce": "Big Larry",
-            "stili": [
+        "stili": [
+                "Feeder",
                 "Baitcasting"
         ],
         "giorno": false,
