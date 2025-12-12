@@ -127,7 +127,11 @@ const listaPesci = [
       "Gold": {
         "numero_amo": "da 5 a 4",
         "peso": "2-3.15kg"
-      }
+       },
+         "Diamond": {
+            "numero_amo": "3",
+            "peso": "3.15-4.10kg"
+        }
     }
   },
   {

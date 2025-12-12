@@ -175,6 +175,141 @@ h3 {
     pointer-events: none; /* evita click sull'immagine, solo wrapper */
 }
 
+/* === MODALE COMPARAZIONE === */
+
+#compareModal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Contenuto centrale */
+.compare-content {
+    background: rgba(255,255,255,0.95);
+    border-radius: 20px;
+    padding: 24px;
+    width: 95%;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    border: 3px solid #007BFF;
+    animation: fadeIn 0.2s ease-out;
+}
+
+/* X per chiudere */
+#closeCompare {
+    position: sticky;
+    top: 0;
+    float: right;
+    font-size: 36px;
+    color: #007BFF;
+    cursor: pointer;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin-bottom: 10px;
+}
+
+/* Titoli coerenti con stile */
+.compare-content h2,
+.compare-content h3 {
+    color: #0056b3;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px white;
+}
+
+/* Lista dei checkbox */
+#compareSelectArea ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#compareSelectArea li {
+    background: rgba(56, 72, 104, 0.9);
+    color: white;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    font-size: 18px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#compareSelectArea input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.4);
+    cursor: pointer;
+}
+
+/* Pulsante "Compara" */
+#startCompare {
+    background: #007BFF;
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    font-size: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background .3s ease;
+}
+
+    #startCompare:hover {
+        background: #0056b3;
+    }
+
+/* Tabelle comparazione */
+.compare-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: rgba(255,255,255,0.8);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.compare-content th {
+    background: #007BFF;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.compare-content td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+    font-size: 17px;
+    background: rgba(255,255,255,0.8);
+}
+
+/* Alternanza righe */
+.compare-content tr:nth-child(even) td {
+    background: rgba(240,240,255,0.8);
+}
+
+/* Animazione morbida */
+@keyframes fadeIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
 /* === MEDIA QUERY PER SMARTPHONE === */
 
 @media (max-width: 600px) {
@@ -207,4 +342,26 @@ h3 {
     padding: 16px;
     font-size: 16px;
   }
+
+    .compare-content {
+        padding: 16px;
+        max-height: 85vh;
+    }
+
+    #compareSelectArea li {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    #startCompare {
+        width: 100%;
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    .compare-content table td,
+    .compare-content table th {
+        font-size: 14px;
+        padding: 6px;
+    }
 }

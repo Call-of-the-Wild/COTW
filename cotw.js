@@ -42,6 +42,9 @@ reserves.forEach(riserva => {
         <span>${pesce.FISH}</span>`;
 
             li.addEventListener('click', () => {
+                pesceSelezionato = pesce;
+                pesciNellaRiserva = pesci;
+
                 const stile = stileDiPesca.find(entry => entry.pesce === pesce.FISH);
                 const stili = stile?.stili || [];
 
@@ -74,13 +77,16 @@ reserves.forEach(riserva => {
                         `<li>${rank}: ${info.numero_amo}, peso: ${info.peso}</li>`).join('')}
             </ul>
             <h4><strong>Zona di Pesca</strong></h4>
+
 <img
     src="img/${pesce.RISERVA[0].toLowerCase()}_${pesce.FISH.toLowerCase().replace(/\s+/g, '_')}.webp" 
     alt="${pesce.FISH}" 
     style="width:100%;max-width:400px;height:auto;margin-bottom:20px;cursor:pointer;" 
     class="zona-pesca-img"
 />
-        `;
+            <button id="compareBtn" class="compare-button">Compara con altri pesci</button>
+        `
+                    ;
 
                 details.style.display = 'block';
                 details.scrollIntoView({ behavior: 'smooth' });
@@ -93,7 +99,7 @@ reserves.forEach(riserva => {
 
         titoloPesci.style.display = 'block';
         fishesList.style.display = 'grid';
-        // Nascondi dettagli finch� non clicco il pesce
+        // Nascondi dettagli finché non clicco il pesce
         titoloDettagli.style.display = 'none';
         details.style.display = 'none';
 
@@ -199,3 +205,103 @@ imageWrapper.addEventListener('touchmove', (e) => {
     imageWrapper.scrollTop = scrollTop - walkY;
 }, { passive: true });
 
+const compareModal = document.getElementById("compareModal");
+const closeCompare = document.getElementById("closeCompare");
+const compareSelectArea = document.getElementById("compareSelectArea");
+const compareResults = document.getElementById("compareResults");
+
+let pesceSelezionato = null;
+let pesciNellaRiserva = [];
+
+// Quando clicco su "Compara"
+document.addEventListener("click", function (e) {
+    if (e.target.id === "compareBtn") {
+        compareModal.style.display = "flex";
+
+        compareSelectArea.innerHTML = `
+            <h3>Seleziona altri pesci da comparare</h3>
+            <ul>
+                ${pesciNellaRiserva
+                .filter(p => p.FISH !== pesceSelezionato.FISH)
+                .sort((a, b) => a.FISH.localeCompare(b.FISH))   // <-- ordina A → Z
+                .map(p => `
+        <li>
+            <label>
+                <input type="checkbox" class="compare-check" value="${p.FISH}">
+                ${p.FISH}
+            </label>
+        </li>
+    `)
+                .join('')}
+            </ul>
+
+            <button id="startCompare">Compara</button>
+        `;
+    }
+});
+
+// Chiudi modale comparazione
+closeCompare.addEventListener("click", () => { compareModal.style.display = "none"; });
+
+// Avvia comparazione
+document.addEventListener("click", function (e) {
+    if (e.target.id === "startCompare") {
+        const scelti = [...document.querySelectorAll(".compare-check:checked")]
+            .map(c => c.value);
+
+        if (scelti.length === 0) {
+            alert("Seleziona almeno un pesce.");
+            return;
+        }
+
+        const pesciComparati = [
+            pesceSelezionato,
+            ...pesciNellaRiserva.filter(p => scelti.includes(p.FISH))
+        ];
+
+        generaTabellaComparazione(pesciComparati);
+    }
+});
+
+function generaTabellaComparazione(pesci) {
+    // --- ESCA ---
+    const tutteLeEsche = new Set();
+    pesci.forEach(p => Object.keys(p.esche).forEach(e => tutteLeEsche.add(e)));
+
+    let escheTable = `
+        <h3>Comparazione Esche</h3>
+        <table>
+            <tr>
+                <th>Esche</th>
+                ${pesci.map(p => `<th>${p.FISH}</th>`).join('')}
+            </tr>
+            ${[...tutteLeEsche].map(esca => `
+                <tr>
+                    <td>${esca}</td>
+                    ${pesci.map(p => `<td>${p.esche[esca] || "-"}%</td>`).join('')}
+                </tr>
+            `).join('')}
+        </table>
+    `;
+
+    // --- NUMERO AMO ---
+    const ranks = ["Juvenile", "Bronze", "Silver", "Gold", "Diamond"];
+
+    let ranksTable = `
+        <h3>Comparazione Numero Amo</h3>
+        <table>
+            <tr>
+                <th>Rank</th>
+                ${pesci.map(p => `<th>${p.FISH}</th>`).join('')}
+            </tr>
+            ${ranks.map(rank => `
+                <tr>
+                    <td>${rank}</td>
+                    ${pesci.map(p => `<td>${p.ranks[rank]?.numero_amo || "-"}</td>`).join('')}
+                </tr>
+            `).join('')}
+        </table>
+    `;
+
+    compareResults.innerHTML = escheTable + ranksTable;
+}
