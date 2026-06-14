@@ -1,6 +1,23 @@
 // Estrai le riserve uniche dalla tua "listaPesci"
 const reserves = [...new Set(listaPesci.map(p => p.RISERVA))];
 
+/* =====================================
+   AUDIO
+===================================== */
+const suoniRiserve = {
+    "Golden Ridge": document.getElementById("goldenSound"),
+    "Trollsporet": document.getElementById("norvegiaSound"),
+    "Aguas Claras": document.getElementById("spagnaSound"),
+    "Izilo Zasendulo": document.getElementById("africaSound"),
+    "Kamuibetsu": document.getElementById("giapponeSound")
+};
+
+    document.getElementById("pesceSound");
+    document.getElementById("mappaSound");
+    document.getElementById("comparaSound");
+    document.getElementById("comparaipesciSound");
+
+
 // Ordina le riserve in base a questo ordine personalizzato
 const ordineRiserve = ['Golden Ridge', 'Trollsporet', 'Aguas Claras', 'Izilo Zasendulo', 'Kamuibetsu'];
 
@@ -20,9 +37,16 @@ fishesList.style.display = 'none';
 details.style.display = 'none';
 
 reserves.forEach(riserva => {
+
     const button = document.createElement('button');
     button.textContent = riserva;
     button.addEventListener('click', () => {
+            console.log(riserva);
+    console.log(suoniRiserve[riserva]);
+            const audioRiserva = suoniRiserve[riserva];
+if (audioRiserva) {
+    playSound(audioRiserva);
+}
         let pesci = listaPesci.filter(p => p.RISERVA === riserva);
         pesci.sort((a, b) => a.FISH.localeCompare(b.FISH));
         pesci.reverse();
@@ -44,6 +68,7 @@ reserves.forEach(riserva => {
             li.addEventListener('click', () => {
                 pesceSelezionato = pesce;
                 pesciNellaRiserva = pesci;
+                playSound(pesceSound);
 
                 const stile = stileDiPesca.find(entry => entry.pesce === pesce.FISH);
                 const stili = stile?.stili || [];
@@ -122,6 +147,7 @@ document.addEventListener('click', function (e) {
         modalImg.src = e.target.src;
         imageWrapper.scrollLeft = (modalImg.width - imageWrapper.clientWidth) / 2;
         imageWrapper.scrollTop = (modalImg.height - imageWrapper.clientHeight) / 2;
+        playSound(mappaSound);
 
         // Blocca scroll pagina
         document.body.style.overflow = 'hidden';
@@ -217,7 +243,7 @@ let pesciNellaRiserva = [];
 document.addEventListener("click", function (e) {
     if (e.target.id === "compareBtn") {
         compareModal.style.display = "flex";
-
+                playSound(comparaipesciSound);
         compareSelectArea.innerHTML = `
             <h3>Seleziona altri pesci da comparare</h3>
             <ul>
@@ -237,6 +263,7 @@ document.addEventListener("click", function (e) {
 
             <button id="startCompare">Compara</button>
         `;
+
     }
 });
 
@@ -260,6 +287,7 @@ document.addEventListener("click", function (e) {
         ];
 
         generaTabellaComparazione(pesciComparati);
+        playSound(comparaSound);
     }
 });
 
@@ -304,4 +332,14 @@ function generaTabellaComparazione(pesci) {
     `;
 
     compareResults.innerHTML = escheTable + ranksTable;
+}
+
+        function playSound(sound) {
+
+    if (!sound)
+        return;
+
+    sound.currentTime = 0;
+
+    sound.play().catch(() => { });
 }
